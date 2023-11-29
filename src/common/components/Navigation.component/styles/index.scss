@@ -1,0 +1,137 @@
+@import '../../../scss/variables';
+@import '../../../../catalog/components/MenuCategories.component/index'; // TODO: rename folder
+@import '~@luft/common/src/components/Navigation.component/index';
+
+.app {
+    .navigation-component {
+        $icon-width: 2rem;
+        $icon-close-width: 1.5rem;
+        $icon-height: 1.6rem;
+        $logo-width: 8.4rem;
+        $logo-height: 2.5rem;
+        $header-border-color: $gray;
+        $menu-label-padding: 0.3rem 0 0;
+        $toggle-component-margin-right: 1.6rem;
+
+        & {
+            height: $header-height-top-bar;
+            max-width: $max-content-width;
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: none;
+            background-color: $dark-blue;
+        }
+
+        .navigation-component-content {
+            flex-grow: 1;
+
+            a {
+                order: 0;
+                z-index: $header-elements-z-index;
+            }
+
+            .navigation-component-toggle {
+                order: 1;
+                margin-left: auto;
+                z-index: $header-elements-z-index;
+            }
+        }
+
+        .navigation-component-content-text {
+            width: $logo-width;
+            height: $logo-height;
+            display: inline-block;
+            text-indent: -99999px;
+            background: center url('../../../resources/svg/bat-logo-header.svg') no-repeat;
+            background-size: $logo-width $logo-height;
+            padding: 0;
+            color: $tertiary;
+        }
+
+        .navigation-component-toggle {
+            margin-right: $toggle-component-margin-right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navigation-component-toggle .navbar-toggler-icon {
+            width: $icon-close-width;
+            height: $icon-width;
+            background-image: url('~bat-core/common/src/resources/svg/base/bat-close-white.svg');
+            color: $tertiary;
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            background-size: $icon-width $icon-height;
+        }
+
+        .navigation-component-toggle .navbar-toggler-text {
+            padding: $menu-label-padding;
+            color: $light;
+            font-size: $font-size-base;
+        }
+
+        .navigation-component-toggle.collapsed .navbar-toggler-icon {
+            width: $icon-width;
+            height: $icon-width;
+            background-image: url('../../../resources/svg/bat-menu.svg');
+        }
+
+        .navigation-component-controls {
+            flex-grow: 0;
+            align-items: center;
+        }
+
+        .cart-bar-component,
+        .account-nav-control-alt-component {
+            .button-component-secondary:not(:disabled):not(.disabled):active,
+            button:active,
+            button:focus {
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.modal-component.navigation-modal-component {
+    $menu-overlay-background: rgba(0, 0, 0, 0.3);
+    $modal-content-height: calc(100vh - #{$header-height-top-bar});
+
+    & {
+        top: $header-height-top-bar;
+        height: auto;
+    }
+
+    .modal-header {
+        display: none;
+    }
+
+    .modal-body,
+    .modal-component-dialog {
+        background-color: transparent;
+    }
+
+    .modal-component-dialog {
+        margin: 0;
+        width: 100%;
+    }
+
+    .modal-content {
+        overflow-y: auto;
+        background-color: $menu-overlay-background;
+    }
+
+    .modal-full-screen .modal-content {
+        height: $modal-content-height;
+    }
+
+    .settings-nav-control-component-button {
+        font-weight: $font-weight-bold;
+
+        &:hover {
+            border-bottom-color: $primary-border-color;
+        }
+    }
+}

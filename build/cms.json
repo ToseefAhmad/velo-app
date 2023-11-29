@@ -1,0 +1,25 @@
+{
+  "block-container-ids": [
+    "reset-password-notification",
+    "cart-totals-after",
+    "cart-continue-shopping",
+    "cart-totals-sidebar-after",
+    "cart-need-help",
+    "subscribe-up-label",
+    "product-detail-component-after-primary-information",
+    "account-preferences-description",
+    "account-preferences-email-description",
+    "account-preferences-component-content-email-notes",
+    "account-preferences-component-content-link",
+    "coupon-cms-title",
+    "checkout-totals-before",
+    "checkout-totals-after",
+    "checkout-shipping-notes",
+    "checkout-success-top",
+    "checkout-success-bottom",
+    "account-referral-disclaimer",
+    "newsletter-disclaimer",
+    "contact-us",
+    "customer-service"
+  ]
+}

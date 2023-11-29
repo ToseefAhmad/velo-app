@@ -1,0 +1,63 @@
+@import '../../../common/scss/variables';
+@import '~@luft/common/src/components/Loader.component/index';
+@import '~@luft/common/src/components/Error.component/index';
+
+.espay-methods-component {
+    $espay-methods-component-default-order: 2;
+    $espay-methods-component-list-title-background-size: 1.4rem 0.9rem;
+    $espay-methods-component-radio-label-text-margin: 2.5rem 0;
+    $espay-methods-component-radio-label-text-padding-left: 12.5rem;
+
+    & {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $m-primary-lg;
+        border-bottom: $border-width solid $secondary-border-color;
+    }
+
+    &-title {
+        margin-bottom: $m-primary;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+    }
+
+    &-default {
+        order: $espay-methods-component-default-order;
+    }
+
+    &-list-item {
+        display: block;
+        border-top: $border-width solid $secondary-border-color;
+    }
+
+    .radio-component:not(.radio-component-tick) .radio-component-label-text {
+        padding-left: $espay-methods-component-radio-label-text-padding-left;
+        margin: $espay-methods-component-radio-label-text-margin;
+    }
+
+    .accordion-component {
+        border-left: $border-width solid $secondary-border-color;
+        border-right: $border-width solid $secondary-border-color;
+    }
+
+    &-list-title.accordion-toggle-component.button-component {
+        & {
+            border-top-color: $secondary-border-color;
+            background-image: url('../../../common/resources/svg/bat-collapsed-espay.svg');
+            background-size: $espay-methods-component-list-title-background-size;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &.accordion-toggle-component-active {
+            background-image: url('../../../common/resources/svg/bat-expanded-espay.svg');
+        }
+    }
+
+    .accordion-component .collapse,
+    .accordion-component .collapsing {
+        padding: 0;
+    }
+}

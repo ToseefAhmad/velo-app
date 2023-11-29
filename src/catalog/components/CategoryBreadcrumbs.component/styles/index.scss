@@ -1,0 +1,49 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/catalog/src/components/CategoryBreadcrumbs.component/index';
+
+.app {
+    $category-breadcrumbs-min-height: 4.5rem;
+    $category-back-icon-size: 1.3rem 2.2rem;
+    $category-breadcrumbs-item-title-before-width: 0.1rem;
+
+    .category-breadcrumbs {
+        & {
+            position: relative;
+            color: $primary-font-color;
+            text-transform: uppercase;
+            margin-right: $m-tertiary;
+            min-height: $category-breadcrumbs-min-height;
+        }
+
+        &::after {
+            right: 0;
+        }
+
+        &:hover {
+            text-transform: uppercase;
+            color: $primary-font-color;
+        }
+
+        .category-breadcrumbs-item-back {
+            padding-left: $p-primary-lg;
+            background-image: url('~bat-core/common/src/resources/svg/velo/velo-back.svg');
+            background-size: $category-back-icon-size;
+        }
+
+        .category-breadcrumbs-item-back .category-breadcrumbs-item-title {
+            & {
+                padding-left: $p-secondary;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: $p-primary-lg;
+                width: $category-breadcrumbs-item-title-before-width;
+                height: 100%;
+                background-color: $primary-border-color;
+            }
+        }
+    }
+}

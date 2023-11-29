@@ -1,0 +1,125 @@
+@import '../../../../common/scss/variables';
+@import '../../SearchModal.component/index';
+@import '~@luft/catalog/src/components/Search.component/index';
+
+.app {
+    .search-component {
+        $search-component-button-line-height: 1.2;
+        $search-component-button-height: 4rem;
+        $search-component-button-background-size: 1.8rem 1.8rem;
+        $search-component-form-zindex: 1021;
+        $search-component-form-input-height: 4rem;
+        $search-component-form-content-icon-width: 4rem;
+        $search-component-form-content-icon-right: 0.5rem;
+        $search-component-form-content-icon-search-size: 1.68rem 1.68rem;
+        $search-component-form-content-icon-close-size: 1.5rem 1.5rem;
+
+        & {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            background: $tertiary;
+            transition: top 1500ms ease, transform 1500ms ease;
+        }
+
+        &-hidden {
+            top: 0;
+        }
+
+        &-button {
+            & {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: $search-component-button-height;
+                z-index: $header-elements-z-index;
+                padding: 0;
+                background-image: url('../../../../common/resources/svg/bat-search.svg');
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                background-size: $search-component-button-background-size;
+            }
+
+            &,
+            &:hover,
+            &:active,
+            &:focus,
+            &:not(:disabled):not(.disabled):active:focus {
+                box-shadow: none;
+            }
+
+            &-text {
+                color: $light;
+                line-height: $search-component-button-line-height;
+                text-transform: capitalize;
+                font-size: $font-size-base;
+                font-weight: $font-weight-normal;
+            }
+        }
+
+        &-form {
+            & {
+                border: none;
+                background: none;
+                position: relative;
+                z-index: $search-component-form-zindex;
+            }
+
+            &-content {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+
+            &-content-input.input-component {
+                background: none;
+                border: none;
+                color: $light;
+                height: $search-component-form-input-height;
+                font-size: $font-size-lg;
+                padding-right: $p-primary-lg;
+            }
+
+            &-content-input:focus {
+                box-shadow: none;
+            }
+
+            &-content-input::placeholder {
+                color: $light;
+            }
+
+            &-content-icon.button-component {
+                & {
+                    position: absolute;
+                    width: $search-component-form-content-icon-width;
+                    right: $search-component-form-content-icon-right;
+                    background-color: transparent;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    border: none;
+                }
+
+                &,
+                &:hover,
+                &:active,
+                &:focus,
+                &:not(:disabled):not(.disabled):active:focus {
+                    box-shadow: none;
+                    background-color: transparent;
+                }
+
+                &.icon-search {
+                    background-image: url('../../../../common/resources/svg/bat-search.svg');
+                    background-size: $search-component-form-content-icon-search-size;
+                }
+
+                &.icon-close {
+                    background-image: url('~bat-core/common/src/resources/svg/velo/velo-close-white.svg');
+                    background-size: $search-component-form-content-icon-close-size;
+                }
+            }
+        }
+    }
+}

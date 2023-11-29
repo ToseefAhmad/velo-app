@@ -1,0 +1,14 @@
+@import '../../../common/scss/variables';
+@import '../../../common/components/Checkbox.component/index';
+
+.register-form-component {
+    &-tooltip {
+        color: $dark-grey;
+        font-size: $font-size-base;
+        margin-bottom: $m-secondary;
+    }
+
+    .checkbox-component {
+        margin-bottom: $m-secondary;
+    }
+}

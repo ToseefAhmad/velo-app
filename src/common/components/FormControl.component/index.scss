@@ -1,0 +1,26 @@
+@import '../../scss/variables';
+@import '~@luft/common/src/components/FormGroup.component/index';
+@import '~@luft/common/src/components/PasswordInput.component/index';
+
+.app,
+.modal-component {
+    .form-control-component {
+        $bat-check-valid-symbol-size: 1.6rem 1.6rem;
+
+        &-secondary {
+            .form-input-component.form-control-component-input-valid:not(.password-input-component-control) {
+                background-image: url('~bat-core/common/src/resources/svg/velo/velo-check-symbol.svg');
+                background-size: $bat-check-valid-symbol-size;
+
+                &[disabled] {
+                    background-image: none;
+                }
+            }
+
+            .form-control-label-transform {
+                color: $disabled-font-color;
+                pointer-events: none;
+            }
+        }
+    }
+}

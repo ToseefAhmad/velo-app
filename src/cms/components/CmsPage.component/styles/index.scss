@@ -1,0 +1,377 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+@import '~@luft/cms/src/components/CmsPage.component/index';
+@import '~bat-core/cms/src/components/CmsMenuSet.component/styles/velo/index';
+@import '~bat-core/common/src/components/AccordionToggle.component/styles/velo/index';
+@import '~bat-core/product/src/components/ProductListSlider.component/styles/velo/index';
+
+.cms-page {
+    $cms-promo-title-top: 50%;
+    $cms-promo-title-left: 50%;
+    $cms-promo-title-width: 90%;
+    $cms-promo-title-font-size: 6rem;
+    $cms-promo-title-line-height: 0.96;
+    $cms-holder-max-width: 98rem;
+    $cms-holder-padding: 5rem 3rem 4rem;
+    $cms-holder-title-font-size: 2.5rem;
+    $cms-holder-title-line-height: 1.2;
+    $cms-video-max-width: 98rem;
+    $cms-tabs-max-width: 77rem;
+    $cms-tablist-width: 100vw;
+    $cms-tablist-height: 0.1rem;
+    $cms-tablist-item-margin: 0 -0.1rem;
+    $cms-tablist-item-max-width: 50%;
+    $cms-tablist-item-min-height: 6.4rem;
+    $cms-tablist-item-color: #f4f4f4;
+    $cms-tabpanel-padding: 4rem 3rem $p-primary !important;
+    $cms-tabpanel-elements-line-height: 2.3rem;
+    $velo-cms-text-top-block-padding-bottom: 18.5rem;
+    $velo-cms-text-bottom-block-padding-bottom: 8rem;
+    $cms-page-font-size: 1.3rem;
+    $cms-page-title-size: 2.4rem;
+    $heading-font-size: 2rem;
+    $cms-page-title-border-bottom: $secondary-border-width solid #d8d8d8;
+    $cms-arrow-link-icon-width: 2rem;
+    $cms-arrow-link-icon-height: 1.4rem;
+    $cms-arrow-link-icon-top: 0.3rem;
+    $cms-arrow-link-icon-margin-left: 0.6rem;
+    $cms-arrow-link-hover-icon-margin-left: 1.2rem;
+    $cms-arrow-link-icon-transition: margin-left 200ms;
+    $cms-list-padding-left: 1.4rem;
+    $cms-accordion-item-border: $secondary-border-width solid #d8d8d8;
+    $cms-accordion-action-font-size: 1.3rem;
+    $cms-accordion-action-padding: 2.5rem 0 2.3rem;
+    $cms-accordion-action-icon-size: 1.3rem;
+    $cms-table-border: 1px solid #d8d8d8;
+    $cms-table-header-background: #f7f7f7;
+
+    & {
+        overflow: hidden;
+        background-color: $light;
+        font-size: $cms-page-font-size;
+    }
+
+    &-component {
+        width: 100%;
+        padding: 0 $p-primary $p-primary-lg;
+    }
+
+    &-title {
+        border-bottom: $cms-page-title-border-bottom !important; // Override inline style
+        font-size: $cms-page-title-size;
+        font-weight: $font-weight-bold;
+        padding: $p-primary-lg 0;
+        margin-bottom: $m-primary-lg;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-heading {
+        font-size: $heading-font-size;
+        text-transform: uppercase;
+        margin: $m-primary-lg 0;
+    }
+
+    &-title + .cms-page-heading {
+        margin-top: 0;
+    }
+
+    .cms-arrow-link {
+        color: $dark;
+        display: inline-block;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .cms-arrow-link::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../../../common/resources/svg/bat-cms-link-arrow.svg');
+        background-size: $cms-arrow-link-icon-width $cms-arrow-link-icon-height;
+        margin-left: $cms-arrow-link-icon-margin-left;
+        height: $cms-arrow-link-icon-height;
+        width: $cms-arrow-link-icon-width;
+        left: 100%;
+        top: $cms-arrow-link-icon-top;
+        transition: $cms-arrow-link-icon-transition;
+    }
+
+    .cms-arrow-link:hover::after {
+        margin-left: $cms-arrow-link-hover-icon-margin-left;
+    }
+
+    .cms-faqs .cms-page-heading {
+        text-align: center;
+    }
+
+    .cms-accordion {
+        & {
+            border-bottom: $cms-accordion-item-border !important; // Override inline style
+        }
+
+        &.first-item {
+            border-top: $cms-accordion-item-border !important; // Override inline style
+        }
+
+        &.active {
+            padding-bottom: $p-primary;
+        }
+
+        &-action {
+            font-size: $cms-accordion-action-font-size;
+            padding: $cms-accordion-action-padding;
+            cursor: pointer;
+            border-bottom: $cms-accordion-item-border;
+            position: relative;
+        }
+
+        &-action::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: $cms-accordion-action-icon-size;
+            height: $cms-accordion-action-icon-size;
+            background-image: url('~bat-core/common/src/resources/svg/velo/velo-increment.svg');
+            background-size: $cms-accordion-action-icon-size $cms-accordion-action-icon-size;
+        }
+
+        &.active .cms-accordion-action::after {
+            background-image: url('~bat-core/common/src/resources/svg/velo/velo-decrement.svg');
+        }
+
+        & > div > *:not(.cms-accordion-action) {
+            display: none;
+        }
+
+        &.active > div > * {
+            display: inherit;
+        }
+    }
+
+    .page-builder-component {
+        ol,
+        ul {
+            margin-left: $m-primary;
+        }
+
+        ol li,
+        ul li {
+            padding-left: $cms-list-padding-left;
+            margin-bottom: $m-primary;
+        }
+
+        ol ol {
+            list-style-type: lower-latin;
+            margin-left: 1.6rem;
+            padding-top: $p-primary;
+        }
+
+        p {
+            margin-bottom: $m-primary;
+        }
+
+        .cms-block-component p {
+            margin-bottom: 0;
+        }
+
+        table {
+            border: $cms-table-border;
+        }
+
+        table td {
+            padding: $p-primary;
+        }
+
+        table tr:first-child td {
+            background-color: $cms-table-header-background;
+            font-weight: $font-weight-bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    .cms-promo {
+        & {
+            position: relative;
+            color: $light;
+            text-align: center;
+        }
+
+        &-title {
+            position: absolute;
+            top: $cms-promo-title-top;
+            left: $cms-promo-title-left;
+            width: $cms-promo-title-width;
+            font-size: $cms-promo-title-font-size;
+            font-weight: $font-weight-bold;
+            line-height: $cms-promo-title-line-height;
+            text-transform: uppercase;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .cms-holder {
+        & {
+            max-width: $cms-holder-max-width;
+            margin: 0 auto;
+            padding: $cms-holder-padding;
+            text-align: center;
+            color: $light;
+            background-color: $secondary;
+        }
+
+        &-title {
+            margin: 0 0 $m-primary;
+            font-size: $cms-holder-title-font-size;
+            font-weight: $font-weight-semibold;
+            line-height: $cms-holder-title-line-height;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: $p-secondary 0;
+        }
+    }
+
+    .cms-video {
+        max-width: $cms-video-max-width;
+        margin: 0 auto;
+    }
+
+    .cms-tabs {
+        & {
+            width: 100%;
+            max-width: $cms-tabs-max-width;
+            margin: 0 auto !important;
+            border: 0;
+        }
+
+        [class^='tabs_navigationGradient'] {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        [role='tablist'] {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            overflow: initial;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: $cms-tablist-width;
+                height: $cms-tablist-height;
+                background-color: $primary-border-color;
+            }
+
+            &::before {
+                right: 100%;
+            }
+
+            &::after {
+                left: 100%;
+            }
+        }
+
+        [role='tablist'] li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 1;
+            flex-grow: 1;
+            margin: $cms-tablist-item-margin;
+            padding: $p-secondary;
+            max-width: $cms-tablist-item-max-width;
+            min-height: $cms-tablist-item-min-height;
+            border: $border-width solid $light;
+            border-top-color: $cms-tablist-item-color;
+            border-bottom-color: $primary-border-color;
+            font-size: $font-size-md;
+            font-weight: $font-weight-normal;
+            line-height: 1;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $cms-tablist-item-color;
+        }
+
+        [role='tablist'] [aria-selected='true'] {
+            color: $primary;
+            border-color: $primary-border-color $primary-border-color $light;
+            background-color: $light;
+        }
+
+        // Override inline styles
+        [role='tabpanel'] > div {
+            padding: $cms-tabpanel-padding;
+        }
+
+        h4 {
+            color: $secondary;
+        }
+
+        * {
+            font-size: $font-size-md;
+            line-height: $cms-tabpanel-elements-line-height;
+        }
+
+        p {
+            & {
+                margin: 0 0 $m-primary;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .cms-row-with-columns .cms-page-column-flex {
+        flex-basis: auto;
+    }
+
+    &-text.cms-page-align-center {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cms-justify-end {
+        justify-content: flex-end;
+    }
+
+    .velo-cms-row {
+        padding: 0 $m-secondary;
+    }
+
+    .velo-cms-heading {
+        margin: $m-primary 0 $m-tertiary;
+    }
+
+    .velo-cms-title {
+        padding: 0 $p-secondary $p-primary;
+
+        &.bottom-block {
+            padding-top: $p-primary;
+        }
+    }
+
+    .velo-cms-text {
+        padding: 0 $p-secondary;
+
+        &.top-block {
+            padding-bottom: $velo-cms-text-top-block-padding-bottom;
+        }
+
+        &.bottom-block {
+            padding-bottom: $velo-cms-text-bottom-block-padding-bottom;
+        }
+    }
+}

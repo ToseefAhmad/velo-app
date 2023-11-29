@@ -1,0 +1,116 @@
+@import '../../../../common/scss/variables';
+
+.variation-attribute-adaptive-component {
+    $self: &;
+    $hover-duration: 100ms;
+    $light-gray-color: #dedede;
+    $dark-gray-color: #686868;
+    $dark-blue-color: #001734;
+    $variation-attribute-padding: 0.6rem;
+    $variation-attribute-width: 7.5rem;
+    $variation-attribute-height: 4rem;
+    $variation-attribute-gap: 0.8rem;
+    $variation-attribute-name-font-size: 1rem;
+    $variation-attribute-margin-bottom: 0.3rem;
+    $indicator-size: 1rem;
+    $indicator-margin-right: 0.2rem;
+
+    & {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, $variation-attribute-width);
+        grid-auto-rows: minmax($variation-attribute-height, 1fr);
+        gap: $variation-attribute-gap;
+    }
+
+    &-value {
+        & {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: $border-width solid $light-gray-color;
+            background-color: transparent;
+            padding: $variation-attribute-padding;
+            transition: background-color $hover-duration ease-in-out, border-color $hover-duration ease-in-out;
+        }
+
+        &:not(&-active) {
+            &:focus,
+            &:hover {
+                & {
+                    border-color: $dark-blue-color;
+                    color: $dark-blue-color;
+                }
+
+                #{$self}-name {
+                    color: $dark-blue-color;
+                }
+
+                #{$self}-indicator {
+                    border-color: $dark-blue-color;
+                }
+
+                #{$self}-indicator-filled {
+                    background-color: $dark-blue-color;
+                }
+            }
+
+            #{$self}-indicator-filled {
+                background-color: $dark-gray-color;
+            }
+        }
+
+        &-active {
+            & {
+                background-color: $dark-blue-color;
+                border-color: $dark-blue-color;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            #{$self} {
+                &-name {
+                    color: $light;
+                }
+
+                &-indicator {
+                    border-color: $light;
+                }
+
+                &-indicator-filled {
+                    background-color: $light;
+                }
+            }
+        }
+    }
+
+    &-name {
+        font-size: $variation-attribute-name-font-size;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        color: $dark-gray-color;
+        line-height: 1;
+        margin-bottom: $variation-attribute-margin-bottom;
+        transition: color $hover-duration ease-in-out;
+    }
+
+    &-indicators {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &-indicator {
+        & {
+            width: $indicator-size;
+            height: $indicator-size;
+            border-radius: 50%;
+            border: $border-width solid $dark-gray-color;
+            transition: background-color $hover-duration ease-in-out, border-color $hover-duration ease-in-out;
+        }
+
+        &:not(:last-child) {
+            margin-right: $indicator-margin-right;
+        }
+    }
+}

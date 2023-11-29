@@ -1,0 +1,18 @@
+@import '../../../common/scss/variables';
+@import '~@luft/user/src/components/Login.component/index';
+@import '~bat-core/user/src/components/PhoneNumberConfirmation.component/styles/velo/index';
+@import '../LoginForm.component/index';
+@import '../RegisterNavControl.component/index';
+@import '../ForgotPasswordNavControl.component/index';
+@import '../PrefilledEmail.component/index';
+@import '../SocialProviders.component/index';
+
+.login-component {
+    &-error-link {
+        color: $light;
+
+        &:hover {
+            color: $light;
+        }
+    }
+}

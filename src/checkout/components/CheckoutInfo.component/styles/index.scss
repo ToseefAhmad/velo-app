@@ -1,0 +1,66 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/checkout/src/components/CheckoutInfo.component/index';
+@import '../../../../cart/components/CartNavigation.component/index';
+@import '../../CheckoutDiscounts.component/index';
+@import '../../CheckoutAppliedDiscounts.component/index';
+@import '../../CheckoutCouponsWallet.component/index';
+@import '../../CheckoutProductsList.component/index';
+@import '../../CheckoutDob.component/index';
+@import '../../CheckoutKtpId.component/index';
+@import '../../CheckoutTotals.component/index';
+@import '../../RewardPoints.component/index';
+@import '../../CheckoutContactInfoStep.component/index';
+@import '../../CheckoutPaymentMethodStep.component/index';
+@import '../../CheckoutBillingAddressStep.component/index';
+@import '~bat-core/common/src/components/AddressPreview.component/styles/velo/index';
+
+.app {
+    .checkout-page {
+        $title-font-size: 1.8rem;
+
+        .checkout-info-component {
+            & {
+                background: $page-bg;
+            }
+
+            &-body-total-title {
+                font-size: $title-font-size;
+                margin-top: 0;
+            }
+
+            .reward-points-component {
+                margin-bottom: $m-primary;
+            }
+
+            &-create-order-holder {
+                margin-bottom: $m-primary;
+            }
+
+            &-payment-box {
+                margin-bottom: $m-primary;
+            }
+
+            &-error-link {
+                font-weight: $font-weight-semibold;
+            }
+        }
+
+        .back-component-control.button-component {
+            text-align: center;
+        }
+
+        .checkout-info-component-terms {
+            display: none;
+        }
+
+        .checkout-contact-info-component .social-providers-component {
+            margin: 0 $m-primary $m-primary;
+            max-width: none;
+        }
+
+        .checkout-contact-info-component-body-message {
+            padding-bottom: $p-secondary;
+            align-items: center;
+        }
+    }
+}

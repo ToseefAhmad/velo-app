@@ -1,0 +1,138 @@
+@import '../../../../common/scss/variables';
+@import '../../../../common/scss/mixins';
+@import '../../../../widget/components/CatalogProductList.component/index';
+@import '../../../../widget/components/CatalogProductListLoader.component/index';
+@import '~@luft/widget/src/components/ProductGrid.component/index';
+@import '~@luft/widget/src/components/ProductGridLoader.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+@import '~bat-core/blog/src/components/BlogPostTile.component/styles/velo/index';
+@import '~bat-core/blog/src/components/BlogWidget.component/styles/velo/index';
+@import '~bat-core/blog/src/components/BlogRelatedPosts.component/styles/velo/index';
+@import '~bat-core/page-builder/src/components/PageBuilder.component/styles/velo/index';
+@import '~bat-core/product/src/components/ProductListSlider.component/styles/velo/index';
+
+.home-page {
+    $active-dot-bg-color: #00a2c7;
+    $slick-dots-bottom-shift: -0.7rem;
+    $slider-dot-border-color: #fff;
+    $slider-dot-border-width: 0.08rem;
+    $dot-size: 0.7rem;
+    $dot-holder-width: 1rem;
+    $slider-button-width: 20.4rem;
+    $slider-button-height: 5rem;
+    $slider-button-top: 1.5rem;
+    $slider-button-font-size: 1.5rem;
+    $button-secondary-width: 33.5rem;
+    $button-secondary-height: 5rem;
+    $button-secondary-font-size: 1.4rem;
+    $middle-block-row-image-margin-x: -50%;
+    $product-price-font-size: 1.8rem;
+
+    & {
+        padding: 0;
+        background: $light;
+        max-width: $max-content-width;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .separator {
+        padding: $p-secondary;
+    }
+
+    &-middle-block-row-image-row {
+        margin-top: $middle-block-row-image-margin-x;
+        margin-bottom: $middle-block-row-image-margin-x;
+        position: relative;
+        z-index: 3;
+    }
+
+    &-middle-block-row {
+        position: relative;
+        z-index: 2;
+    }
+
+    &-middle-block-row .home-page-block-secondary-button {
+        margin-right: $m-secondary;
+    }
+
+    &-slider {
+        .slick-list {
+            button {
+                width: $slider-button-width;
+                height: $slider-button-height;
+                text-align: center;
+                color: $light;
+                border-radius: 0;
+                position: relative;
+                top: $slider-button-top;
+            }
+
+            button,
+            button:hover {
+                background-color: $primary;
+                border-color: $primary;
+                font-size: $slider-button-font-size;
+            }
+        }
+
+        .slick-dots {
+            & {
+                position: absolute;
+                bottom: $slick-dots-bottom-shift;
+                margin-left: 0 !important;
+            }
+
+            li {
+                width: $dot-holder-width !important;
+                padding: 0 !important;
+                margin-bottom: 0 !important;
+            }
+
+            button {
+                width: $dot-size !important;
+                height: $dot-size !important;
+                background: transparent !important;
+                border: solid $slider-dot-border-width $slider-dot-border-color;
+            }
+
+            .slick-active button {
+                border: solid $slider-dot-border-width $active-dot-bg-color;
+                background-color: $active-dot-bg-color !important;
+            }
+        }
+    }
+
+    &-block-secondary-button {
+        button {
+            width: $button-secondary-width;
+            height: $button-secondary-height;
+            text-align: center;
+            border-radius: 0;
+            font-size: $button-secondary-font-size;
+        }
+
+        button,
+        button:hover {
+            background: transparent;
+            border: solid $border-width-lg $primary;
+            color: $primary;
+        }
+    }
+
+    .product-list-slider-component-title {
+        font-size: $h2-font-size;
+    }
+
+    .product-price-component-minimum-value {
+        font-size: $product-price-font-size;
+    }
+
+    .product-list-slider-component-products {
+        @include scrollable-list-media-all($item-selector: '.product-list-slider-component-product');
+    }
+
+    .blog-widget-component .blog-widget-component-action-block {
+        padding-top: 0;
+    }
+}

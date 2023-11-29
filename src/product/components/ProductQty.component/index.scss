@@ -1,0 +1,11 @@
+@import '../../../common/scss/variables';
+@import '~@luft/product/src/components/ProductQty.component/index';
+@import '~bat-core/common/src/components/NumberInput.component/styles/velo/index';
+
+.app {
+    .product-qty-component {
+        &-title {
+            font-size: $font-size-mobile;
+        }
+    }
+}

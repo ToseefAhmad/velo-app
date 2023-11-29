@@ -1,0 +1,14 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/product/src/components/ProductListSlider.component/styles/velo/index';
+
+.recommended-category-component {
+    $title-font-size: 2rem;
+
+    .product-list-slider-component-title {
+        text-align: left;
+        font-size: $title-font-size;
+        font-weight: $font-weight-bold;
+        color: $dark;
+        text-transform: uppercase;
+    }
+}

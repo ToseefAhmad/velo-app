@@ -1,0 +1,74 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .home-page {
+        $middle-block-bottom-row-padding-top: 19rem;
+        $top-text-span-font-size: 2.8rem !important;
+        $top-text-span-line-height: 2.2rem !important;
+        $bottom-text-padding-top: 2.5rem !important;
+        $bottom-text-span-font-size: 1.2rem !important;
+        $bottom-text-span-line-height: 1.4rem !important;
+        $bottom-text-h5-font-size: 2.8rem !important;
+        $bottom-text-h5-line-height: 2.8rem !important;
+
+        &-top-slider {
+            margin: 0 -#{$m-primary} !important;
+        }
+
+        &-middle-block-row {
+            &-top-text {
+                span {
+                    font-size: $top-text-span-font-size;
+                    line-height: $top-text-span-line-height;
+                }
+            }
+
+            &-bottom-text {
+                padding-top: $bottom-text-padding-top;
+
+                span {
+                    font-size: $bottom-text-span-font-size;
+                    line-height: $bottom-text-span-line-height;
+                }
+
+                h5 {
+                    margin-bottom: $m-primary !important;
+
+                    span {
+                        font-size: $bottom-text-h5-font-size;
+                        line-height: $bottom-text-h5-line-height;
+                    }
+                }
+
+                br {
+                    display: none;
+                }
+            }
+
+            .home-page-middle-block-row-button-holder {
+                text-align: center;
+            }
+        }
+
+        &-middle-block-top-row > div {
+            margin-top: 0 !important;
+        }
+
+        &-middle-block-bottom-row > div {
+            padding-top: $middle-block-bottom-row-padding-top !important;
+        }
+
+        &-middle-block-row-image-row {
+            padding-right: $p-primary !important;
+        }
+
+        &-slider {
+            .catalog-product-list-component-products {
+                &::-webkit-scrollbar {
+                    display: inherit;
+                }
+            }
+        }
+    }
+}

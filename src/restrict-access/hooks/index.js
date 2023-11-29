@@ -1,0 +1,1 @@
+export {useExtractDobFromNationalIdLazyQuery} from './useExtractDobFromNationalIdLazyQuery';

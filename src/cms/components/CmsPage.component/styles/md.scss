@@ -1,0 +1,143 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .cms-page {
+        $cms-promo-margin-bottom: -4rem;
+        $cms-holder-padding: 8.5rem 15rem 6rem;
+        $cms-holder-title-font-size: 4rem;
+        $cms-holder-title-line-height: 5.1rem;
+        $cms-holder-p-font-size: 2rem;
+        $cms-faqs-title-margin: 0 0 4rem;
+        $cms-faqs-font-size: 2.6rem;
+        $cms-faqs-line-height: 3.1rem;
+        $cms-tablist-padding: 2.4rem;
+        $cms-tabpanel-padding: 6rem 3rem 0 !important;
+        $velo-cms-row-max-width: 74rem;
+        $velo-cms-heading-margin-top: 3.5rem;
+        $velo-cms-heading-font-size: 4.6rem !important;
+        $velo-cms-title-padding: 0 0 3.5rem;
+        $velo-cms-title-font-size: 4rem !important;
+        $velo-cms-text-font-size: 2rem !important;
+        $velo-cms-text-line-height: 2.8rem !important;
+        $velo-cms-top-block-padding-bottom: 20.5rem;
+        $velo-cms-bottom-block-padding-top: 20rem;
+        $cms-page-font-size: 1.4rem;
+        $cms-page-title-size: 3.6rem;
+        $cms-page-component-padding: 0 8rem 8rem;
+        $heading-font-size: 2.6rem;
+        $cms-faq-item-title-font-size: 1.4rem;
+        $cms-faq-item-icon-size: 1.4rem;
+        $cms-list-margin-left: 6rem;
+
+        & {
+            font-size: $cms-page-font-size;
+        }
+
+        &-body {
+            display: flex;
+        }
+
+        &-component {
+            padding: $cms-page-component-padding;
+        }
+
+        &-component-homepage {
+            padding: 0;
+        }
+
+        &-title {
+            font-size: $cms-page-title-size;
+            text-align: left;
+        }
+
+        &-heading {
+            font-size: $heading-font-size;
+            text-transform: uppercase;
+            margin-bottom: $m-primary-lg;
+            text-align: left;
+        }
+
+        .cms-faqs .cms-page-heading {
+            text-align: left;
+        }
+
+        .cms-faq-items {
+            h4 {
+                font-size: $cms-faq-item-title-font-size;
+            }
+
+            h4::after {
+                width: $cms-faq-item-icon-size;
+                height: $cms-faq-item-icon-size;
+                background-size: $cms-faq-item-icon-size $cms-faq-item-icon-size;
+            }
+        }
+
+        .page-builder-component {
+            ol,
+            ul {
+                margin-left: $cms-list-margin-left;
+            }
+        }
+
+        .cms-promo {
+            margin-bottom: $cms-promo-margin-bottom;
+        }
+
+        .cms-holder {
+            & {
+                padding: $cms-holder-padding;
+            }
+
+            &-title {
+                font-size: $cms-holder-title-font-size;
+                line-height: $cms-holder-title-line-height;
+            }
+
+            p {
+                font-size: $cms-holder-p-font-size;
+                margin: $m-primary 0;
+            }
+        }
+
+        .cms-tabs {
+            [role='tablist'] li {
+                padding: $cms-tablist-padding;
+            }
+
+            // Override inline styles
+            [role='tabpanel'] > div {
+                padding: $cms-tabpanel-padding;
+            }
+        }
+
+        .velo-cms-row {
+            max-width: $velo-cms-row-max-width;
+            padding: 0;
+        }
+
+        .velo-cms-heading {
+            margin-top: $velo-cms-heading-margin-top;
+            font-size: $velo-cms-heading-font-size;
+        }
+
+        .velo-cms-title span {
+            padding: $velo-cms-title-padding;
+            font-size: $velo-cms-title-font-size;
+        }
+
+        .velo-cms-text span {
+            font-size: $velo-cms-text-font-size;
+            line-height: $velo-cms-text-line-height;
+        }
+
+        .velo-cms-tex.top-block {
+            padding-bottom: $velo-cms-top-block-padding-bottom;
+        }
+
+        .velo-cms-title.bottom-block {
+            padding-top: $velo-cms-bottom-block-padding-top;
+        }
+    }
+}

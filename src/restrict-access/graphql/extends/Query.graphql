@@ -1,0 +1,7 @@
+extend type Query {
+    """
+    [restrict-access][VELO]
+    Extract dob from national ID (KTP ID)
+    """
+    extractDobFromNationalId(national_id: String): Dob
+}

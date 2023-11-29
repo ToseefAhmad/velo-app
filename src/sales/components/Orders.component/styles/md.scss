@@ -1,0 +1,10 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-page {
+        .orders-component-group-title {
+            padding: 0 $p-primary-lg;
+        }
+    }
+}

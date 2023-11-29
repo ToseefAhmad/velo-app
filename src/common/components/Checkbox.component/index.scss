@@ -1,0 +1,12 @@
+@import '~@luft/common/src/components/Checkbox.component/index';
+
+.app,
+.modal-component {
+    .checkbox-component {
+        &-default .checkbox-component-input:checked + .checkbox-component-label .checkbox-component-label-text {
+            &::before {
+                background-image: url('../../resources/svg/bat-check.svg');
+            }
+        }
+    }
+}

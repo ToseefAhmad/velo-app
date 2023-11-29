@@ -1,0 +1,15 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    $newsletter-component-form-body-width-md: 40rem;
+
+    .app {
+        .newsletter-component {
+            &-form-body,
+            &-text {
+                width: $newsletter-component-form-body-width-md;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'velosans-regular';
+    src: url('../fonts/velosans-regular.woff2') format('woff2'), url('../fonts/velosans-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'velosans-regular';
+    src: url('../fonts/velosans-medium.woff2') format('woff2'), url('../fonts/velosans-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'velosans-regular';
+    src: url('../fonts/velosans-bold.woff2') format('woff2'), url('../fonts/velosans-bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

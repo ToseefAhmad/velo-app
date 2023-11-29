@@ -1,0 +1,44 @@
+@import '../../common/scss/variables';
+@import '../../common/components/Toast.component/index';
+// TODO: Delete after CartItem.component styles will be moved to bat-core and imported in MiniCart.component
+@import '../../cart/components/CartItem.component/index';
+@import '../../push-notification/components/PushNotificationModal.component/index';
+@import '~bat-core/live-chat/src/components/SalesforceChat.component/index';
+@import '~bat-core/cart/src/components/MiniCartTransition.component/styles/velo/index';
+
+.app {
+    $content-min-height: calc(100vh - #{$header-height});
+    $shipping-notes-font-size: 1.4rem;
+    $shipping-notes-max-width: 66.4rem;
+
+    & {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: $content-min-height;
+        flex-grow: 1;
+    }
+
+    .toast-component {
+        top: $height-base + $m-secondary;
+    }
+
+    .shipping-notes {
+        & {
+            padding: $p-primary;
+            margin-bottom: $m-secondary;
+            font-size: $shipping-notes-font-size;
+            max-width: $shipping-notes-max-width;
+        }
+
+        &-title {
+            font-size: $shipping-notes-font-size;
+            font-weight: $font-weight-bold;
+        }
+    }
+}

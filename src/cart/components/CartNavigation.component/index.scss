@@ -1,0 +1,20 @@
+.app {
+    .cart-navigation-component {
+        $cart-navigation-component-checkout-icon-size: 2.4rem;
+        $cart-navigation-component-cart-icon-size: 2.5rem 2.5rem;
+
+        .cart-navigation-checkout::before {
+            width: $cart-navigation-component-checkout-icon-size;
+            height: $cart-navigation-component-checkout-icon-size;
+        }
+
+        .cart-navigation-cart.selected::before {
+            background-image: url('../../../common/resources/svg/bat-cart-selected.svg');
+            background-size: $cart-navigation-component-cart-icon-size;
+        }
+
+        .cart-navigation-checkout.selected::before {
+            background-image: url('../../../common/resources/svg/bat-checkout-selected.svg');
+        }
+    }
+}

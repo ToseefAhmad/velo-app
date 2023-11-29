@@ -1,0 +1,45 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+@import '~bat-core/common/src/components/AppliedDiscountItem.component/styles/velo/index';
+
+.app {
+    .coupon-component {
+        & {
+            padding: $p-primary;
+        }
+
+        &-title {
+            font-size: $font-size-md;
+            font-weight: $font-weight-normal;
+            color: $primary-font-color;
+            text-transform: none;
+        }
+
+        &-body {
+            padding: 0;
+            border-bottom: none;
+            display: flex;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        &-actions {
+            padding: 0;
+        }
+
+        .form-group-component {
+            margin-right: $m-secondary;
+            flex-grow: 1;
+        }
+
+        .cms-promo-code-title {
+            display: inline-block;
+        }
+
+        .cms-promo-code-title-bold {
+            font-weight: $font-weight-bold;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+
+.app {
+    .forgot-password-nav-control-component {
+        &-button {
+            transition: text-decoration-color 150ms ease;
+
+            &:hover {
+                color: $placeholder-font-color;
+                text-decoration-color: transparent;
+            }
+        }
+    }
+}

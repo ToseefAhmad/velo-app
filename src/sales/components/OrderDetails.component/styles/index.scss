@@ -1,0 +1,79 @@
+@import '../../../../common/scss/variables';
+@import '../../OrderTotalsItem.component/index';
+@import '~bat-core/common/src/components/AddressPreview.component/styles/velo/index';
+@import '~bat-core/sales/src/components/Reorder.component/styles/velo/index';
+@import '~bat-core/sales/src/components/OrderStatus.component/styles/velo/index';
+
+.app {
+    .order-details-component {
+        $order-details-component-product-pane-image-link-flex-basis: 11.6rem;
+
+        &-boxes {
+            padding: 0;
+        }
+
+        &-product-item {
+            padding: $p-primary;
+        }
+
+        .product-image-component {
+            padding-top: 100%;
+        }
+
+        .reorder-component {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .product-pane-component {
+            &-body {
+                align-self: center;
+            }
+
+            &-image-link {
+                flex-basis: $order-details-component-product-pane-image-link-flex-basis;
+                margin-right: $m-secondary;
+            }
+
+            &-name-link {
+                display: inline-block;
+                margin-bottom: $m-secondary;
+            }
+        }
+
+        .product-title-component,
+        .product-qty-plain-component-value {
+            font-weight: $font-weight-normal;
+        }
+
+        .product-price-component {
+            margin-bottom: $m-secondary;
+        }
+
+        .regular-product-price-component,
+        .minimum-product-price-component-value,
+        .final-product-price-component-value {
+            font-weight: $font-weight-bold;
+        }
+
+        .regular-product-price-component,
+        .minimum-product-price-component-value,
+        .final-product-price-component-value {
+            font-size: $font-size-md;
+        }
+
+        .order-details-component-tracking-number-value {
+            display: inline-block;
+            margin-left: $m-tertiary;
+        }
+
+        &-points-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $m-secondary;
+
+            &-value {
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}

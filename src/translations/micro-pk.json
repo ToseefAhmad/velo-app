@@ -1,0 +1,7 @@
+{
+  "restrict-access.components.RestrictAccess.component.agree": "Yes",
+  "restrict-access.components.RestrictAccess.component.disagree": "No",
+  "restrict-access.components.RestrictAccess.component.notice": "This website contains information about a tobacco free nicotine product that is addictive. This website is intended for nicotine product users aged 18 years or over and residing in Pakistan.",
+  "restrict-access.components.RestrictAccess.component.text": "Please verify whether you are 18 years or older",
+  "restrict-access.components.RestrictAccess.component.title": "To access this website, you\n must be 18 years or older"
+}

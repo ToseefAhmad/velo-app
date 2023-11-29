@@ -1,0 +1,13 @@
+@import '../../common/scss/variables';
+@import '~bat-core/common/src/components/Back.component/styles/velo/index';
+@import '../../product/components/ProductDetail.component/index';
+
+.product-page {
+    & {
+        background-color: $light;
+    }
+
+    .back-component .button-component {
+        font-weight: $font-weight-normal;
+    }
+}

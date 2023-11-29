@@ -1,0 +1,8 @@
+@import '~@luft/user/src/components/ForgotPassword.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+
+.forgot-password-component {
+    &-tip {
+        text-align: center;
+    }
+}

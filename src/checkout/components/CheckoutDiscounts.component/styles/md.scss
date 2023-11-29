@@ -1,0 +1,11 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .checkout-info-component-step-checkout-discounts {
+            .checkout-discounts-component-accordion .accordion-toggle.button-component {
+                border-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../../common/scss/variables';
+@import '../CartItem.component/index';
+
+.app {
+    .cart-items-component {
+        flex-direction: column;
+
+        .cart-item-component {
+            border-top: none;
+
+            &:not(:last-child) {
+                margin-bottom: $m-secondary;
+                margin-top: 0;
+            }
+        }
+    }
+}

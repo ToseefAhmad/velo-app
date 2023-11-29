@@ -1,0 +1,7 @@
+type Dob {
+    """
+    [restrict-access][VELO]
+    Date of birth extracted from National ID
+    """
+    dob: String
+}

@@ -1,0 +1,19 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .cart-totals-component {
+        $z-index-cart-total: 981;
+
+        & {
+            border-top: 0;
+            margin-bottom: $m-primary;
+            z-index: $z-index-cart-total;
+        }
+
+        &-checkout:disabled {
+            &:before {
+                background-image: url('../../../../common/resources/svg/bat-locked-disabled.svg');
+            }
+        }
+    }
+}

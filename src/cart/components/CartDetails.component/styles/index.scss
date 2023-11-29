@@ -1,0 +1,17 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/quote/src/components/CrossSellProducts.component/styles/velo/index';
+@import '../../../../checkout/components/CheckoutDiscounts.component/index';
+@import '../../../../checkout/components/CheckoutAppliedDiscounts.component/index';
+@import '../../../../checkout/components/CheckoutCouponsWallet.component/index';
+@import '../../../../checkout/components/CheckoutTotals.component/index';
+@import '../../CartTotals.component/index';
+@import '../../CartItems.component/index';
+
+.app {
+    .cart-details-component {
+        .checkout-discounts-component,
+        .checkout-applied-discounts-component {
+            margin-bottom: $m-primary;
+        }
+    }
+}

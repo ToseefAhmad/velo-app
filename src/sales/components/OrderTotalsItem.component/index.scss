@@ -1,0 +1,10 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .order-totals-item-component {
+        &-value {
+            white-space: nowrap;
+            margin-left: $m-secondary;
+        }
+    }
+}

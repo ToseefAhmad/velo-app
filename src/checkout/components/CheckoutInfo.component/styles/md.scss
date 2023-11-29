@@ -1,0 +1,72 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        $title-font-size: 2rem;
+
+        // TODO: This component does not exist anymore
+        .checkout-component {
+            $social-login-padding: 3rem;
+
+            .checkout-contact-info-component {
+                .social-providers-component {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: $social-login-padding 0;
+
+                    &::before {
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .social-providers-component-item {
+                    margin: 0;
+                    width: 50%;
+                }
+
+                .social-providers-component-button-facebook {
+                    margin-right: $m-secondary;
+                }
+
+                .social-providers-component-button-google {
+                    margin-left: $m-secondary;
+                }
+            }
+        }
+
+        .checkout-page {
+            .checkout-info-component {
+                &-body-total {
+                    margin-top: 0;
+                    order: 2;
+                }
+
+                &-body-total-title {
+                    font-size: $title-font-size;
+                }
+            }
+        }
+
+        .checkout-info-component {
+            &-body-total {
+                flex-shrink: 0;
+                width: $total-column-width;
+            }
+
+            &-header-wrapper {
+                background-color: $light;
+                border-bottom: $border-width solid $gray;
+            }
+
+            .cart-header-component {
+                max-width: $max-content-width;
+                margin: auto;
+                border: none;
+            }
+        }
+    }
+}

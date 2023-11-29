@@ -1,0 +1,44 @@
+@import '../../../common/scss/variables';
+@import '~@luft/product/src/components/ProductPreview.component/index';
+@import '~bat-core/product/src/components/ProductPrice.component/styles/velo/index';
+@import '~bat-core/wishlist/src/components/WishlistProductActions.component/styles/velo/index';
+
+.app,
+.modal-component {
+    .product-preview-component {
+        $product-preview-component-wishlist-button-width: 2.2rem !default;
+        $product-preview-component-wishlist-button-height: 2rem !important;
+
+        & {
+            margin-bottom: 0;
+            height: 100%;
+        }
+
+        > .product-preview-link-image {
+            padding: 0;
+            background-color: $image-background-color;
+        }
+
+        & .product-preview-component-name-link {
+            color: $primary-font-color;
+            font-size: $h4-font-size;
+            font-weight: bold;
+        }
+
+        .image-placeholder-component-background {
+            background-color: $image-background-color;
+        }
+
+        .image-component {
+            padding-top: 100%;
+        }
+
+        .add-to-wishlist-component,
+        .remove-from-wishlist-component {
+            width: $product-preview-component-wishlist-button-width;
+            height: $product-preview-component-wishlist-button-height;
+            background-size: $product-preview-component-wishlist-button-width
+                $product-preview-component-wishlist-button-height;
+        }
+    }
+}

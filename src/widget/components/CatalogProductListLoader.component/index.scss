@@ -1,0 +1,12 @@
+@import '../../../common/scss/mixins';
+@import '~@luft/widget/src/components/CatalogProductListLoader.component/index';
+
+.app {
+    .catalog-product-list-loader {
+        $self: &;
+
+        & &-items {
+            @include scrollable-list-media-all($item-selector: #{$self}-item);
+        }
+    }
+}

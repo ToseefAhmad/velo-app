@@ -1,0 +1,5 @@
+query ExtractDobFromNationalIdQuery($national_id: String) {
+    extractDobFromNationalId(national_id: $national_id) @connection(key: "extractDobFromNationalId") {
+        dob
+    }
+}

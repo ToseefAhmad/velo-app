@@ -1,0 +1,12 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .category-breadcrumbs {
+            &::after {
+                color: $primary-font-color;
+            }
+        }
+    }
+}

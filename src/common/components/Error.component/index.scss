@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+
+.app {
+    .error-component {
+        & {
+            text-align: center;
+            text-transform: uppercase;
+            color: $light;
+            background-color: $danger;
+        }
+
+        a {
+            color: $light;
+            text-decoration: underline;
+        }
+    }
+}

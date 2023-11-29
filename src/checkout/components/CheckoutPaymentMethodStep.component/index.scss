@@ -1,0 +1,14 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/payment/src/components/PaymentMethodList.component/styles/velo/index';
+
+.app {
+    .checkout-payment-method-step-component-preview {
+        &-change.button-component {
+            display: none;
+        }
+
+        &-has-payment .checkout-step-preview-component-body {
+            background-image: url('~@luft/common/src/resources/svg/arrow-right.svg');
+        }
+    }
+}

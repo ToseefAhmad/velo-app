@@ -1,0 +1,25 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/cart/src/components/CartCmsBlock.component/styles/velo/index';
+@import '../../CartNavigation.component/index';
+@import '../../CartDetails.component/index';
+
+.app {
+    .cart-info-component {
+        background-color: $page-bg;
+
+        &-header-wrapper {
+            background-color: $light;
+            border-bottom: $border-width solid $gray;
+        }
+
+        .cart-header-component {
+            max-width: $max-content-width;
+            margin: auto;
+            border: none;
+        }
+
+        .cart-continue-shopping {
+            margin-top: $m-primary !important; // Override inline style
+        }
+    }
+}

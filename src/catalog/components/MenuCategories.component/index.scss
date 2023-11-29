@@ -1,0 +1,31 @@
+@import '../../../common/scss/variables';
+
+.modal-component {
+    .menu-categories-component {
+        .accordion-toggle-component.button-component {
+            border-top: none;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &-category {
+            color: $primary-font-color;
+
+            &:hover {
+                color: $primary-font-color;
+            }
+        }
+
+        &-category-active,
+        &-category-active.accordion-toggle.button-component {
+            &,
+            &:active,
+            &:hover,
+            &:active:focus {
+                color: $primary;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/common/src/scss/grid/index';
+@import '../ProductPreview.component/index';
+
+.app {
+    .product-list-component {
+        & {
+            background-color: $background-primary-color;
+        }
+
+        .col-6 {
+            margin-bottom: $m-secondary;
+        }
+    }
+}

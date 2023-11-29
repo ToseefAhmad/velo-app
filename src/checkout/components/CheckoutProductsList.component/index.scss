@@ -1,0 +1,113 @@
+@import '../../../common/scss/variables';
+@import '../../../common/scss/mixins';
+@import '~bat-core/checkout/src/components/CheckoutProductsListItem.component/styles/velo/index';
+@import '../CheckoutTotals.component/index';
+@import '../../../product/components/ProductQty.component/index';
+@import '../../../product/components/VariationAttribute.component/index';
+@import '../../../product/components/ConfigurableProductPlainOptions.component/index';
+
+.checkout-products-list-component {
+    $checkout-products-list-component-icon-size: 1.9rem;
+    $checkout-products-list-component-icon-margin: 0 $m-secondary 0 1.7rem;
+    $checkout-products-list-component-scroll-bar-width: 0.8rem;
+    $checkout-products-list-component-product-item-height: 15.5rem;
+    $checkout-products-list-component-products-item-padding-bottom: 1.5rem;
+    $checkout-products-list-component-max-height: 2 * $checkout-products-list-component-product-item-height;
+    $checkout-products-list-component-product-link-top-for-first-child: 2rem;
+    $checkout-products-list-component-product-name-margin-right: 5rem;
+    $checkout-products-list-component-product-item-font-size: $font-size-md;
+    $checkout-products-list-component-product-title-font-size: 1.5rem;
+    $checkout-products-list-component-product-title-line-height: 2rem;
+    $checkout-products-list-component-product-sku-line-height: 1.2rem;
+
+    & {
+        background: $light;
+        padding: $p-primary $p-secondary $p-primary $p-primary;
+        margin-bottom: $m-primary;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-header-inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &-count {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+    }
+
+    &-body {
+        margin-top: $m-primary;
+    }
+
+    &-body-hidden {
+        display: none;
+    }
+
+    &-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: $checkout-products-list-component-max-height;
+
+        @include scrollable-list-media-all(
+            '.checkout-info-component-products-item',
+            $scroll-bar-width: $checkout-products-list-component-scroll-bar-width
+        );
+    }
+
+    &-item {
+        padding-right: $checkout-products-list-component-products-item-padding-bottom;
+    }
+
+    &-item:first-child {
+        .checkout-products-list-component-product-wrapper {
+            border-top: $border-width solid $primary-border-color;
+            padding-top: $p-primary;
+        }
+    }
+
+    &-item:not(:last-child) {
+        margin-bottom: $m-primary;
+
+        .checkout-products-list-component-product-wrapper {
+            padding-bottom: $p-primary;
+            border-bottom: $border-width solid $primary-border-color;
+        }
+    }
+
+    &-item:first-child .checkout-products-list-component-product-link {
+        top: $checkout-products-list-component-product-link-top-for-first-child;
+    }
+
+    &-toggle-icon {
+        width: $checkout-products-list-component-icon-size;
+        height: $checkout-products-list-component-icon-size;
+        background-image: url('~bat-core/common/src/resources/svg/velo/velo-increment.svg');
+        background-size: $checkout-products-list-component-icon-size $checkout-products-list-component-icon-size;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        align-self: flex-end;
+        margin: $checkout-products-list-component-icon-margin;
+    }
+
+    &-toggle-icon-active {
+        background-image: url('~bat-core/common/src/resources/svg/velo/velo-decrement.svg');
+    }
+
+    .product-pane-component .product-title-component {
+        font-size: $checkout-products-list-component-product-title-font-size;
+        line-height: $checkout-products-list-component-product-title-line-height;
+    }
+
+    .product-sku-component {
+        line-height: $checkout-products-list-component-product-sku-line-height;
+        margin-top: $m-tertiary;
+    }
+}

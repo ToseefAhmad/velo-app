@@ -1,0 +1,108 @@
+@import '../../../../common/scss/variables';
+@import '../../../../user/components/SocialProviders.component/index';
+@import '../../../../user/components/RegisterForm.component/index';
+
+.app {
+    $social-login-margin: 3rem 0 0;
+    $success-col-max-width: 42.2rem;
+    $success-col-padding: 0 3rem;
+    $success-button-max-width: 15rem;
+    $success-button-padding: 0.4rem $p-primary;
+    $success-font-size: 1.4rem;
+    $continue-shopping-max-width: 44rem;
+
+    .checkout-success-component {
+        & {
+            background-color: $page-bg;
+            display: block;
+            padding-top: 0;
+        }
+
+        &-body {
+            max-width: unset;
+        }
+
+        &-block-title {
+            font-weight: $font-weight-bold;
+        }
+
+        &-order {
+            font-size: $font-size-md;
+        }
+
+        &-confirmation {
+            font-size: $font-size-mobile;
+        }
+
+        &-continue {
+            display: inline-block;
+            max-width: $continue-shopping-max-width;
+        }
+
+        .social-providers-component {
+            margin: $social-login-margin;
+        }
+
+        .social-providers-component-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cms-block-component:first-child {
+            margin: 0 -#{$m-primary};
+        }
+
+        &-block + .cms-block-component {
+            margin: $m-primary -#{$m-primary} 0;
+        }
+    }
+
+    .success-cms-block {
+        & > div > div {
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .checkout-success-col {
+        & {
+            position: relative;
+            align-self: center !important; // Override inline style
+            width: 100% !important; // Override inline style
+            max-width: $success-col-max-width;
+        }
+
+        &-body {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            flex-direction: column;
+            justify-content: center;
+            padding: $success-col-padding;
+        }
+
+        &-title-primary {
+            color: $tertiary-font-color;
+        }
+
+        &-title-secondary,
+        .tagline-light {
+            color: $light;
+        }
+
+        .button-component {
+            max-width: $success-button-max-width;
+            padding: $success-button-padding;
+        }
+
+        .tagline {
+            margin-bottom: $m-secondary;
+            font-size: $success-font-size;
+        }
+    }
+
+    .checkout-success-col + .checkout-success-col {
+        margin-top: $m-secondary !important; // Override inline style
+    }
+}

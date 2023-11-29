@@ -1,0 +1,13 @@
+@import '../../../common/scss/variables';
+@import '../../../user/components/SocialProviders.component/index';
+@import '../CheckoutTotalsInfo.component/index';
+
+.app {
+    .checkout-totals-component {
+        &-points-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $m-secondary;
+        }
+    }
+}

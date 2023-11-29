@@ -1,0 +1,65 @@
+@import './variables';
+
+.phone-component {
+    $phone-component-width: 4rem;
+    $phone-component-padding-left: 5.2rem;
+    $phone-component-uae-padding-left: 6rem;
+    $phone-component-top: 1rem; // same as label height
+    $phone-prefix-content-id: '+62';
+    $phone-prefix-content-pk: '+92';
+    $phone-prefix-content-uae: '+971';
+
+    .form-control-component {
+        &-secondary {
+            .form-label.active-label {
+                &::before {
+                    position: absolute;
+                    top: $phone-component-top;
+                    left: 0;
+                    width: $phone-component-width;
+                    font-weight: $input-font-weight;
+                    color: $disabled-font-color;
+                    font-size: $font-size-lg;
+                }
+            }
+
+            .form-label.active-label ~ .form-input-component {
+                padding-left: $phone-component-padding-left;
+            }
+        }
+    }
+
+    &-id .form-control-component {
+        &-secondary {
+            .form-label.active-label {
+                &::before {
+                    content: $phone-prefix-content-id;
+                }
+            }
+        }
+    }
+
+    &-pk .form-control-component {
+        &-secondary {
+            .form-label.active-label {
+                &::before {
+                    content: $phone-prefix-content-pk;
+                }
+            }
+        }
+    }
+
+    &-uae .form-control-component {
+        &-secondary {
+            .form-label.active-label {
+                &::before {
+                    content: $phone-prefix-content-uae;
+                }
+
+                ~ .form-input-component {
+                    padding-left: $phone-component-uae-padding-left;
+                }
+            }
+        }
+    }
+}

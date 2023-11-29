@@ -1,0 +1,18 @@
+@import '../ProductQty.component/index';
+
+.app {
+    .product-update-component {
+        &-action-close {
+            background-image: url('../../../common/resources/svg/bat-collapse.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .number-input-component-increment,
+        .number-input-component-decrement {
+            &-group .button-component:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}

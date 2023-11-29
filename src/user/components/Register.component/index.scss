@@ -1,0 +1,8 @@
+@import '~@luft/user/src/components/Register.component/index';
+@import '../RegisterForm.component/index';
+@import '../LoginNavControl.component/index';
+@import '../SocialProviders.component/index';
+
+.register-component {
+    position: relative;
+}

@@ -1,0 +1,37 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        $block-padding: 3rem $p-primary;
+        $cms-block-margin: 7rem auto 6rem;
+        $cms-block-max-width: 144rem;
+        $success-col-margin: 0 0 0 0.7rem;
+
+        .checkout-success-component {
+            &-block {
+                padding: $block-padding;
+            }
+
+            &-block:first-child,
+            .cms-block-component:first-child + .checkout-success-component-block {
+                margin-top: 7rem !important;
+            }
+
+            &-block + .cms-block-component {
+                max-width: $cms-block-max-width;
+                margin: $cms-block-margin;
+            }
+        }
+
+        .success-cms-block {
+            & > div > div {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+
+        .checkout-success-col + .checkout-success-col {
+            margin: $success-col-margin !important; // Override inline style
+        }
+    }
+}

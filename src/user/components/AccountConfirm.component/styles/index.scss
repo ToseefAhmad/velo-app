@@ -1,0 +1,27 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+
+.account-confirm-component {
+    &-form {
+        padding: $p-primary;
+    }
+
+    &-tip {
+        text-align: center;
+        margin-bottom: $m-primary;
+    }
+
+    &-submit.button-component {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-submit-title {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+    }
+
+    .form-group {
+        margin: 0;
+    }
+}

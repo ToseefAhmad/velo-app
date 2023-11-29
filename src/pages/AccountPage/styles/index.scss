@@ -1,0 +1,67 @@
+@import '../../../common/scss/variables';
+@import '../../../Router/Authorize.switch/index';
+@import '../../../Router/Account.switch/index';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+
+.account-page {
+    $mini-back-icon-size: 0.7rem 1.2rem;
+
+    & {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .back-component-nav-mini {
+        .back-component-control.button-component {
+            background-size: $mini-back-icon-size;
+        }
+    }
+
+    .account-menu-title .back-component-control {
+        text-align: center;
+    }
+
+    &-content {
+        flex-basis: 100%;
+    }
+
+    // If this block will have a background-color, then the loader
+    // will be inside a white rectangle, which looks terrible.
+    // Thus the background-color was moved to each block independently.
+    // It needs a higher specificity to override core styles
+    .account-page-content {
+        background-color: transparent;
+    }
+
+    .account-address-book-component,
+    .account-address-book-add-component,
+    .account-address-book-edit-component,
+    .account-security-component,
+    .account-orders-component,
+    .account-order-component,
+    .account-info-component {
+        background-color: $light;
+    }
+
+    .update-account-info-submit {
+        margin-top: auto;
+        text-transform: uppercase;
+    }
+
+    &-body {
+        & {
+            display: flex;
+            flex: 1 0 auto;
+            flex-flow: column;
+        }
+
+        .back-component-control-title {
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    .account-settings-security-wrapper {
+        padding: 0 $p-primary;
+    }
+}

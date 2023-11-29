@@ -1,0 +1,11 @@
+@import '../../../common/scss/variables';
+@import '~@luft/user/src/components/ResetPassword.component/index';
+
+.reset-password-component {
+    $notification-max-width: 80%;
+
+    &-notification {
+        max-width: $notification-max-width;
+        margin: $m-primary auto;
+    }
+}

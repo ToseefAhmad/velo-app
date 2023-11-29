@@ -1,0 +1,27 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/newsletter/src/components/Newsletter.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+
+.newsletter-component {
+    & {
+        margin-bottom: $m-primary;
+    }
+
+    &-form {
+        margin-bottom: 0;
+    }
+
+    &-form-title {
+        color: $secondary;
+        text-align: left;
+        font-weight: $font-weight-bold;
+    }
+
+    .form-control-component-secondary .form-control-label-transform {
+        color: $primary-font-color;
+    }
+
+    &-text {
+        margin-top: $m-tertiary;
+    }
+}

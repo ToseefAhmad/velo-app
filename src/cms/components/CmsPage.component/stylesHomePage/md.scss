@@ -1,0 +1,20 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .home-page {
+        $middle-block-row-height: 59.9rem;
+
+        &-content {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &-middle-block-row {
+            &,
+            & > div {
+                min-height: $middle-block-row-height !important;
+            }
+        }
+    }
+}

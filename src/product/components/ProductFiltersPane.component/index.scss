@@ -1,0 +1,30 @@
+@import '../../../common/scss/variables';
+@import '../ProductFilters.component/index';
+@import '../ProductSorts.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/velo/index';
+
+.app {
+    .product-filters-pane {
+        & {
+            z-index: $zindex-dropdown;
+        }
+
+        &-actions {
+            margin-bottom: $m-primary;
+            background-color: $dark;
+        }
+
+        .filters-count {
+            margin-left: $m-tertiary;
+        }
+
+        .button-component {
+            font-weight: $font-weight-normal;
+        }
+
+        &-open-control.button-component:before {
+            margin-right: $m-secondary;
+            background-image: url('../../../common/resources/svg/bat-filters.svg');
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/sales/src/components/OrderItem.component/styles/velo/index';
+
+.app {
+    .orders-component {
+        .orders-component-list,
+        .orders-component-group-title {
+            background-color: $background-primary-color;
+        }
+    }
+}
